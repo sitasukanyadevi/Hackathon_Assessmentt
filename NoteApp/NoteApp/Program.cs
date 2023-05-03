@@ -101,8 +101,18 @@ namespace NoteApp
                 Console.WriteLine("3. View All Notes:");
                 Console.WriteLine("4. Update Note By Id:");
                 Console.WriteLine("5. Delete Note By Id");
-                Console.WriteLine("enter ur choice");
-                int choice = Convert.ToInt16(Console.ReadLine());
+                
+                int choice = 0;
+                try
+                {
+                    Console.WriteLine("enter ur choice");
+                    choice=Convert.ToInt16(Console.ReadLine());
+                }
+                catch(FormatException)
+                {
+        
+                        Console.WriteLine("Enter only Numbers");
+                }
                 switch (choice)
                 {
                     case 1:
